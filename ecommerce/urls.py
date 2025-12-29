@@ -1,13 +1,17 @@
 
 from django.conf import settings
 from . import views
+from django.urls import path,include
 from django.contrib import admin
-from django.urls import path
 from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home')
+    path('',views.home, name='home'),
+    path('about/',views.about_us, name='about_us'),
+    path('contact/',views.contact_us, name='contact_us'),
+    path('products/',include('store.urls'))
 ]
 
 if settings.DEBUG:

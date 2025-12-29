@@ -1,7 +1,7 @@
 import re
 
 # Read the file
-with open('templates/index.html', 'r', encoding='utf-8') as f:
+with open('templates/about_us.html', 'r', encoding='utf-8') as f:
     content = f.read()
 
 # First, revert any escaped quotes back
