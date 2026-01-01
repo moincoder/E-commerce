@@ -12,7 +12,9 @@ class Product(BaseModel):
     slug=models.SlugField(unique=True,null=True,blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.PositiveIntegerField(null=True,blank=True)
+    discount=models.PositiveIntegerField(blank=True,null=True)
     catagory = models.ForeignKey('Catagory', on_delete=models.PROTECT, related_name='products')
+    subcatagory=models.ForeignKey('SubCatagory',on_delete=models.PROTECT,related_name='subcatagory')
 
     def __str__(self):
         return self.name+' - '+self.stock.__str__()
@@ -21,7 +23,11 @@ class Product(BaseModel):
         self.slug=self.name.lower().replace(' ','-')
         self.stock=5
         super().save(*args,**kwargs)
-    
+
+
+
+
+
 class productImage(BaseModel):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='media/products/')
