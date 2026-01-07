@@ -1,0 +1,222 @@
+/* 
+ * Login & Signup Page Styles
+ * Matches Color Admin E-commerce Theme
+ */
+
+.login-container,
+.signup-container {
+    max-width: 450px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h2,
+.signup-container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #212121;
+    text-align: center;
+    margin: 0 0 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00acac;
+}
+
+.login-container .form-group,
+.signup-container .form-group {
+    margin-bottom: 20px;
+}
+
+.login-container .form-group label,
+.signup-container .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login-container .form-control,
+.signup-container .form-control {
+    height: 45px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccd0d4;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    transition: border-color 0.2s ease;
+    -webkit-transition: border-color 0.2s ease;
+    -moz-transition: border-color 0.2s ease;
+}
+
+.login-container .form-control:focus,
+.signup-container .form-control:focus {
+    border-color: #00acac;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 172, 172, 0.1);
+    -webkit-box-shadow: 0 0 0 3px rgba(0, 172, 172, 0.1);
+}
+
+.login-container .btn,
+.signup-container .btn {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.login-container .btn-primary,
+.signup-container .btn-primary {
+    background: #00acac;
+    border-color: #00acac;
+    color: #fff;
+}
+
+.login-container .btn-primary:hover,
+.login-container .btn-primary:focus,
+.signup-container .btn-primary:hover,
+.signup-container .btn-primary:focus {
+    background: #009688;
+    border-color: #009688;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 172, 172, 0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0, 172, 172, 0.3);
+}
+
+.login-container .btn-primary:active,
+.signup-container .btn-primary:active {
+    background: #008a8a;
+    border-color: #008a8a;
+}
+
+/* Additional login/signup elements */
+.login-container .forgot-password,
+.signup-container .forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.login-container .forgot-password a,
+.signup-container .forgot-password a {
+    font-size: 13px;
+    color: #707478;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.login-container .forgot-password a:hover,
+.signup-container .forgot-password a:hover {
+    color: #00acac;
+}
+
+.login-container .signup-link,
+.login-container .login-link,
+.signup-container .signup-link,
+.signup-container .login-link {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 14px;
+    color: #707478;
+}
+
+.login-container .signup-link a,
+.login-container .login-link a,
+.signup-container .signup-link a,
+.signup-container .login-link a {
+    color: #00acac;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.login-container .signup-link a:hover,
+.login-container .login-link a:hover,
+.signup-container .signup-link a:hover,
+.signup-container .login-link a:hover {
+    color: #009688;
+}
+
+/* Error messages */
+.login-container .alert,
+.signup-container .alert {
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.login-container .alert-danger,
+.signup-container .alert-danger {
+    background-color: #fff5f5;
+    border: 1px solid #ff5b57;
+    color: #cc4946;
+}
+
+.login-container .alert-success,
+.signup-container .alert-success {
+    background-color: #f0fafa;
+    border: 1px solid #00acac;
+    color: #008a8a;
+}
+
+/* Checkbox styling */
+.login-container .checkbox,
+.signup-container .checkbox {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.login-container .checkbox label,
+.signup-container .checkbox label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #707478;
+    cursor: pointer;
+}
+
+.login-container .checkbox input[type="checkbox"],
+.signup-container .checkbox input[type="checkbox"] {
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    .login-container,
+    .signup-container {
+        margin: 40px 20px;
+        padding: 30px 20px;
+    }
+    
+    .login-container h2,
+    .signup-container h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container,
+    .signup-container {
+        margin: 20px 15px;
+        padding: 25px 15px;
+    }
+    
+    .login-container h2,
+    .signup-container h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+}

@@ -14,7 +14,7 @@ class Product(BaseModel):
     stock = models.PositiveIntegerField(null=True,blank=True)
     discount=models.PositiveIntegerField(blank=True,null=True)
     catagory = models.ForeignKey('Catagory', on_delete=models.PROTECT, related_name='products')
-    subcatagory=models.ForeignKey('SubCatagory',on_delete=models.PROTECT,related_name='subcatagory')
+    subcatagory=models.ForeignKey('SubCatagory',on_delete=models.PROTECT,related_name='subcatagory',null=True,blank=True)
 
     def __str__(self):
         return self.name+' - '+self.stock.__str__()
@@ -55,7 +55,7 @@ class Catagory(BaseModel):
 
 
 class SubCatagory(BaseModel):
-    catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE, related_name='sub_catagories')
+    catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE, related_name='sub_catagorie')
     name = models.CharField(max_length=255)
     slug=models.SlugField(null=True,blank=True)
     description = models.TextField()
